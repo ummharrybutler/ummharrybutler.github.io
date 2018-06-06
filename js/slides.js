@@ -2,7 +2,7 @@ $(document).ready(function() {
   var i = 0;
   var vHeight = $(window).height();
   var scrollMarkers = new Array();
-  var counter = 1;
+  var counter = 21;
   var calledBack = false;
   var hitOnce = false;
   var runMe = false;
