@@ -73,6 +73,7 @@ button
   font-family: 'Futura Medium';
   margin:1em 0 1em 0;
   transition: all 0.5s ease;
+  font-size: 1em;
 }
 button:hover
 {
