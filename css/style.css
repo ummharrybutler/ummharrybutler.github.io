@@ -17,6 +17,10 @@ title
 {
   pointer-events: none;
 }
+.home
+{
+  cursor: pointer;
+}
 .slide p, .slide i
 {
   will-change: opacity;
@@ -385,4 +389,7 @@ button:hover
 .smolBean
 {
   font-size: 0.6em;
+}
+@media only screen  and (min-width : 1824px) {
+  body{font-size:1.4em;}
 }

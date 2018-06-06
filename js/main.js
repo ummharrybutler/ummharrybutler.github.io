@@ -61,4 +61,9 @@ $(document).ready(function() {
     });
 		sound.play();
 	});
+	$('.home').click(function(event) {
+		$('body,html').animate({scrollTop: 0}, 100,function() {
+			location.reload();
+		});
+	});
 });
