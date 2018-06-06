@@ -1,0 +1,140 @@
+<!doctype html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="description" content="Dead Zone">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Dead Zone</title>
+        <link rel="stylesheet" href="css/style.css">
+        <link rel="author" href="humans.txt">
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
+        <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/howler/2.0.12/howler.core.min.js"></script>
+        <script>
+          var sound = new Howl({ src: ["sounds/main-back.webm"], autoplay: true, loop: true, volume: 0.3 });
+          var textHit1 = new Howl({ src: ["sounds/hit-1.webm"], autoplay: false, loop: false, volume: 0.6 });
+          var textHit2 = new Howl({ src: ["sounds/hit-2.webm"], autoplay: false, loop: false, volume: 1 });
+          var textHit3 = new Howl({ src: ["sounds/hit-3.webm"], autoplay: false, loop: false, volume: 1 });
+          var textHit4 = new Howl({ src: ["sounds/hit-4.webm"], autoplay: false, loop: false, volume: 1 });
+          var textHit5 = new Howl({ src: ["sounds/hit-5.webm"], autoplay: false, loop: false, volume: 1 });
+          $(document).ready(function() {
+            var toggle = false;
+            $('.mute').click(function(event) {
+              /* Act on the event */
+              if (toggle === true)
+              {
+                sound.mute(false);
+                toggle = false;
+                $('.mute').toggleClass('fa-volume-up fa-volume-off');
+              }
+              else {
+                sound.mute(true);
+                toggle = true;
+                $('.mute').toggleClass('fa-volume-up fa-volume-off');
+              }
+            });
+            });
+          </script>
+    </head>
+    <body>
+      <div class="betterWith">
+        <div class="betterWithCon">
+          <h2>Reccomendations</h2>
+          <p>This web experience uses audio as an integral part of the story telling.<br />Headphones are reccomeneded.<br />Firefox is the preffered browser as Chrome's shit when it comes to animations.</p>
+          <button class="betCon">Continue</button>
+        </div>
+      </div>
+
+      <nav class="controlBox">
+        <i class="fas fa-home"></i>
+        <i class="fas fa-volume-up mute"></i>
+      </nav>
+
+      <div class="slide sOne">
+        <div class="conWrap">
+          <h1 class="title">Dead<br />Zone</h1><br />
+          <i class="fas fa-arrow-down goTo goTo2"></i>
+        </div>
+      </div>
+      <div class="slide sTwo">
+        <div class="conWrap">
+          <div class="s-1">
+            <p>Get ready to hold your breath for 20 seconds.</p>
+          </div>
+          <div class="s-2">
+            <div class="countdown">
+              <div class="countdownTimer">
+                <p>Hold your breath.</p>
+                <p class="time">20</p>
+              </div>
+            </div>
+          </div>
+          <div class="s-3">
+            <p>Dead Zones are areas of the ocean with extremely low oxygen levels.</p>
+          </div>
+          <div class="s-4">
+            <p>This leads to mass mortality of ocean wildlife.</p>
+            <img src="images/fish.svg" class="fish fish1"></img><br />
+            <img src="images/fish.svg" class="fish fish2"></img><br />
+            <img src="images/fish.svg" class="fish fish3"></img><br />
+            <img src="images/fish.svg" class="fish fish4"></img><br />
+            <img src="images/fish.svg" class="fish fish5"></img><br />
+            <i class="fas fa-arrow-down goTo goTo3"></i>
+          </div>
+        </div>
+      </div>
+      <div class="slide sThree">
+        <div class="conWrap">
+          <div class="s-1">
+            <p>The number of dead zones has doubled every decade since the 1960's.</p>
+          </div>
+          <div class="s-2">
+            <p>Fertiliser run off and ocean acidification are the causes of the crisis.</p>
+            <i class="fas fa-arrow-down goTo goTo4"></i>
+          </div>
+        </div>
+      </div>
+      <div class="slide sFour">
+        <div class="conWrap">
+          <div class="s-1">
+            <img src="images/worldmap-withdots.svg" class='map svg'></img>
+            <script src="js/svg.js"></script>
+          </div>
+          <div class="s-2">
+            <img src="images/australia.svg" class='map svg'></img>
+            <script src="js/svg.js"></script>
+            <div class="deadInfo">
+              <p class="name">Hoo Ha Bay</p>
+              <p class="smolBean loc">Marrickville</p>
+              <p class="smolBean res">Mass Mortality</p>
+            </div>
+            <script src="js/map.js"></script>
+            <i class="fas fa-arrow-down goTo goTo5"></i>
+          </div>
+        </div>
+      </div>
+      <div class="slide sFive">
+        <div class="conWrap">
+          <div class="s-1">
+            <p>Help save our marine life.</p>
+            <button>Donate</button>
+          </div>
+        </div>
+      </div>
+
+    	<div id="skyBackground"></div>
+    	<div id="waterBackground"></div>
+      <div>
+    	<div class="lightBox" id="scene">
+    	</div>
+        <script src="js/main.js"></script>
+        <script src="js/slides.js"></script>
+        <!-- <script type="text/javascript">
+  			  // Pretty simple huh?
+          var scene = document.getElementById('scene');
+          var parallaxInstance = new Parallax(scene, {
+            relativeInput: true
+          });
+        </script> -->
+    </body>
+</html>

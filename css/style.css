@@ -1,0 +1,388 @@
+@font-face
+{
+    font-family: 'Built Titling'; /*a name to be used later*/
+    src: url('../fonts/built_titling_sb.otf'); /*URL to font*/
+}
+@font-face
+{
+  font-family: 'Futura Medium';
+  src: url('../fonts/Futura.otf');
+}
+*
+{
+	padding:0;
+	margin:0;
+}
+title
+{
+  pointer-events: none;
+}
+.slide p, .slide i
+{
+  will-change: opacity;
+}
+.fish
+{
+  will-change: transform;
+}
+body,html
+{
+	overflow-x:hidden;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+h1
+{
+	font-family: 'Built Titling';
+	font-size: 4em;
+	letter-spacing: 0.1em;
+	transition: all 0.2s ease;
+  transition: all 4s ease;
+  opacity: 0;
+}
+h2
+{
+  font-family: 'Built Titling';
+	font-size: 2em;
+  color: #ccc;
+  margin:0.5em 0 0.5em 0;
+}
+.betterWith p
+{
+  font-family: 'Futura Medium';
+  color: #c3c3c3;
+  margin:0.5em 0 0.5em 0;
+  font-size: 0.9em;
+}
+p
+{
+  font-family: 'Futura Medium';
+  font-size: 1.2em;
+  color: #fff;
+}
+button
+{
+  background: none;
+  border: 1px solid #ccc;
+  padding: 0.3em;
+  color: #ccc;
+  font-family: 'Futura Medium';
+  margin:1em 0 1em 0;
+  transition: all 0.5s ease;
+}
+button:hover
+{
+  cursor: pointer;
+  color: #fff;
+  border: 2px solid #fff;
+  transition: all 0.5s ease;
+}
+#skyBackground
+{
+	width:100vw;
+	background:url("../images/sky.svg#svgView(preserveAspectRatio(none))");
+  	background-size: 100% 100%;
+  	z-index:-1;
+  	position: absolute;
+  	top:0;
+  	left:0;
+}
+#waterBackground
+{
+	width:100vw !important;
+	background:url("../images/water-better-01.svg#svgView(preserveAspectRatio(none))");
+  	background-size: 100% 100% !important;
+  	z-index:-1;
+  	position: absolute;
+  	top:0;
+  	left:0;
+}
+.betterWith
+{
+  width:100%;
+  height:100%;
+  position: absolute;
+  top:0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.8);
+  z-index: 999;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: all 0.3s ease;
+}
+.betterWithCon
+{
+  text-align: center;
+  width: 50%;
+  transition: all 0.3s ease;
+}
+.slide
+{
+	width:100vw;
+	height:100vh;
+}
+.sOne, .sTwo, .sThree, .sFour, .sFive
+{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+.sOne .conWrap, .sTwo .conWrap, .sThree .conWrap, .sFour .conWrap, .sFive .conWrap
+{
+  text-align: center;
+}
+.sOne .fas
+{
+  margin-left: -1.5em;
+  position:absolute;
+  bottom: 8em;
+  opacity:0;
+  transition: all 4s ease;
+  transition-delay: 6s;
+}
+.sTwo .fa-arrow-down, .sThree .fa-arrow-down, .sFour .fa-arrow-down
+{
+  opacity: 0;
+  transition: all 4s ease;
+  color: #fff;
+}
+.sThree .fa-arrow-down
+{
+  margin-top: 4em;
+}
+.s-1,.s-2,.s-3,.s-4, .s-5
+{
+  display:none;
+  opacity:0;
+}
+.ray
+{
+	position: relative;
+	top:0;
+	left:0;
+	width:8em;
+	height:60em;
+	background-color: #fff;
+	z-index:1;
+	display: inline-block;
+	padding:0;
+	-webkit-mask-image: linear-gradient(to bottom, rgba(0,0,0,1), rgba(0,0,0,0)), linear-gradient(to bottom, rgba(0,0,0,1), rgba(0,0,0,0));
+  	-webkit-mask-size: 100% 100%;
+  	-webkit-mask-repeat: no-repeat;
+  	-webkit-mask-position: left top, left bottom;
+	will-change: transform;
+}
+.lightBox
+{
+	position: absolute;
+	width: 200%;
+	left:-192px;
+	overflow: hidden;
+  z-index:-1;
+}
+.controlBox
+{
+  padding-top:1em;
+  display: grid;
+  grid-template-columns: 5% 90% 5%;
+  grid-template-rows: auto;
+  grid-template-areas:". center .";
+  align-items: center;
+  justify-content: space-between;
+  width:100%;
+  height:2em;
+  position: fixed;
+  z-index:999;
+}
+.controlBox .fa-home
+{
+  grid-area: center;
+  justify-self:start;
+}
+.controlBox .fa-volume-up, .controlBox .fa-volume-off
+{
+  grid-area: center;
+  justify-self:end;
+}
+.goTo
+{
+  cursor:pointer;
+}
+.goTo:hover
+{
+  color:#727272;
+  transition: all 1s ease;
+}
+.countdown
+{
+
+}
+.countdownTimer
+{
+
+}
+.fish
+{
+
+}
+@-webkit-keyframes swim
+{
+  0% {left: -7em}
+	70% {left: 110vw;}
+	100% {left: 110vw;}
+}
+
+@keyframes swim
+{
+	0% {left: -7em}
+	70% {left: 110vw;}
+	100% {left: 110vw;}
+}
+
+.fish
+{
+	width: 7em;
+	height: auto;
+	left: -7em;
+	position: absolute;
+  margin: 2em;
+  opacity:0.6;
+}
+
+.fish1,
+.fish2,
+.fish3,
+.fish4,
+.fish5
+{
+  -moz-animation: bounce 2s infinite, swim 20s linear;
+  -webkit-animation: bounce 2s infinite,swim 20s linear;
+  animation: bounce 2s infinite, swim 20s linear;
+}
+
+.fish2
+{
+	animation-delay: 0.5s;
+	-webkit-animation-delay: 0.5s;
+}
+
+.fish3{
+	animation-delay: 0.2s;
+	-webkit-animation-delay: 0.2s;
+}
+
+.fish4{
+	animation-delay: 0.4s;
+	-webkit-animation-delay: 0.4s;
+}
+
+.fish5{
+	animation-delay: 0.1s;
+	-webkit-animation-delay: 0.1s;
+}
+
+/**/
+@-moz-keyframes bounce {
+  0%, 50%, 100% {
+    -moz-transform: translateY(0);
+    transform: translateY(0);
+  }
+  25% {
+    -moz-transform: translateY(-5px);
+    transform: translateY(-5px);
+  }
+  75% {
+    -moz-transform: translateY(-3px);
+    transform: translateY(-3px);
+  }
+}
+@-webkit-keyframes bounce {
+  0%, 50%, 100% {
+    -webkit-transform: translateY(0);
+    transform: translateY(0);
+  }
+  25% {
+    -webkit-transform: translateY(-5px);
+    transform: translateY(-5px);
+  }
+  75% {
+    -webkit-transform: translateY(-3px);
+    transform: translateY(-3px);
+  }
+}
+@keyframes bounce {
+  0%, 50%, 100% {
+    -moz-transform: translateY(0);
+    -ms-transform: translateY(0);
+    -webkit-transform: translateY(0);
+    transform: translateY(0);
+  }
+  25% {
+    -moz-transform: translateY(-5px);
+    -ms-transform: translateY(-5px);
+    -webkit-transform: translateY(-5px);
+    transform: translateY(-5px);
+  }
+  75% {
+    -moz-transform: translateY(-3px);
+    -ms-transform: translateY(-3px);
+    -webkit-transform: translateY(-3px);
+    transform: translateY(-3px);
+  }
+}
+.map
+{
+  height:60vh;
+}
+.map #dot-1,
+.map #dot-2,
+.map #dot-3,
+.map #dot-4,
+.map #dot-5,
+.map #dot-6,
+.map #dot-7,
+.map #dot-8,
+.map #dot-9,
+.map #dot-10,
+.map #dot-11,
+.map #dot-12,
+.map #dot-13,
+.map #dot-14,
+.map #dot-15,
+.map #dot-16,
+.map #dot-17,
+.map #dot-18,
+.map #point-1,
+.map #point-2,
+.map #point-3,
+.map #point-4,
+.map #point-5,
+.map #point-6,
+.map #point-7,
+.map #point-8,
+.map #point-9,
+.map #point-10
+{
+  opacity: 0;
+  transition: opacity 1s ease;
+}
+.deadInfo
+{
+  display: none;
+  opacity: 0;
+  margin: 0 5em 0 5em;
+  position: absolute;
+  width:10em;
+  text-align: left;
+  transition: all 2s ease;
+}
+.deadInfo .name
+{
+  font-size: 1em;
+
+}
+.smolBean
+{
+  font-size: 0.6em;
+}
